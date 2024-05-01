@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: visalidolepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: visalidolepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: visalidolepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: visalidolepipelinesjavascriptdocker 
+          image: mynewlearningcontainerregistry.azurecr.io/visalidolepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
